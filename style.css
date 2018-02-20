@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	box-sizing: border-box;
+	cursor: default;
+}
+
+::selection {
+	background: transparent;
+}
+
+html, body, #app {
+	height: 100%;
+}
+
+body {
+	background: #222;
+	color: #f0f0f0;
+	font-family: 'Roboto', sans-serif;
+}
+
+#app {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+	width: 320px;
+}
+
+input[type="checkbox"] {
+	visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+
+.password span {
+	overflow: hidden;
+	width: 0;
+	animation-name: write-animation;
+	animation-duration:1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+@keyframes write-animation {
+    from {width: 0px;}
+    to {width: 200px;}
+}
+
+.password > span,
+.title > span {
+	display: block;
+	line-height: 2;
+}
+
+.password,
+.title,
+.switch {
+	margin: 10px 0;
+}
+
+.updatePassword {
+    display: inline-block;
+    background: #ccc;
+    width: 30px;
+    height: 10px;
+	border-radius: 15px;
+	position: relative;
+	margin-right: 10px;
+}
+
+label {
+	line-height: 2;
+}
+
+input[type="checkbox"]:checked + label > .updatePassword {
+	background: #2196f3;
+}
+
+span.updatePassword:after {
+    content: "";
+    display: block;
+    height: 15px;
+    width: 15px;
+    background: white;
+    border-radius: 100%;
+    position: absolute;
+	top: -2px;
+	left: 0;
+	transition: all 300ms ease;
+	box-shadow: 0 0 5px 1px rgba(1, 1, 1, 0.5);
+}
+
+input[type="checkbox"]:checked + label > .updatePassword:after {
+	background: #0c7cd5;
+	left: 15px;
+	transition: all 300ms ease;
+}
+
+input[type="button"] {
+    background: #2196f3;
+    border: 0;
+    padding: 10px 20px;
+    text-align: center;
+    min-width: 100px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+	outline: 0;
+	width: 50%;
+    margin: 10px 0;
+}
+
+.updatePassword,
+table > tbody > tr > td,
+input[type="button"] {
+	cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons > input[type="button"]:nth-child(1) {
+	margin-right: 5px;
+}
+
+.buttons > input[type="button"]:nth-child(2) {
+	margin-left: 5px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 2px solid #2196f3;
+}
+
+table > tbody > tr > td {
+	border-right: 2px solid #2196f3;
+	border-left: 2px solid #2196f3;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5px 0;
+}
+
+table > tbody > tr > td > span {
+	display: block;
+	padding: 5px;
+}
+
+table > tbody > tr > td.active {
+	background: #2196f3;
+	color: white;
+} 

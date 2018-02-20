@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estonian Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <script src="wordList.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <div class="container">
+            <h1>Password Generator</h1>
+
+            <div class="switch">
+                <label>
+                    Replace characters with symbols
+                </label>
+            </div>
+
+            <table>
+                <tr>
+                    <td><span>a</span><span>4</span></td>
+                    <td><span>e</span><span>3</span></td>
+                    <td><span>i</span><span>1</span></td>
+                    <td><span>o</span><span>0</span></td>
+                    <td><span>s</span><span>5</span></td>
+                    <td><span>t</span><span>7</span></td>
+                    <td><span>õ</span><span>6</span></td>
+                    <td><span>ä</span><span>2</span></td>
+                    <td><span>ö</span><span>6</span></td>
+                    <td><span>ü</span><span>y</span></td>
+                </tr>
+            </table>
+
+            <div class="switch">
+                <input type="checkbox" id="useCapitals" name="capitals" value="capitals" class="updatePassword">
+                <label for="useCapitals">
+                    <span class="updatePassword"></span>
+                    Capital letters</label>
+            </div>
+
+            <div class="title"><h2>Title</h2><span></span></div>
+
+            <div class="password"><h2>Password</h2><span id="pw"></span></div>
+    
+            <div class="buttons">
+                <input type="button" value="new" id="new">
+                <input type="button" value="reset" id="reset">
+            </div>
+    
+        </div>
+
+    </div>
+</body>
+</html>
